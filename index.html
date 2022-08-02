@@ -2,234 +2,53 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Дохлі орки</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <script type="text/javascript" src="main.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Дохлі орки</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
 <body>
-    <div class="container">
-        <div class="page-header-title">
-            <h1 class="h1">Дохлі орки</h1>
-            <p>Станом на <strong id="date"></strong></a>
-                <strong id="day"></strong>
-            </p>
-        </div>
-        <div class="loses-content">
-            <div class="loses-item">
-                <div class="loses-item-icon">
-                    <img src="https://russianwarship.rip/images/icons/icon-people.svg" alt="icon" class="loses-item-image" width="89" height="56">
-                </div>
-                <div class="loses-item-content">
-                    <div class="loses-item-title">
-                        <span id="personnel_units" class="loses-item-value"></span>
-                        <span id="personnel_units_per_day" class="loses-item-change">
-                        </span>
-                    </div>
-                    <div class="loses-item-text">
-                        орків
-                    </div>
-                </div>
-            </div>
-            <div class="loses-item">
-                <div class="loses-item-icon">
-                    <img src="https://russianwarship.rip/images/icons/icon-tank.svg" alt="icon" class="loses-item-image" width="126" height="53">
-                </div>
-                <div class="loses-item-content">
-                    <div class="loses-item-title">
-                        <span id="tanks" class="loses-item-value"></span>
-                        <span id="tanks_per_day" class="loses-item-change">
-                        </span>
-                    </div>
-                    <div class="loses-item-text">
-                        танків
-                    </div>
-                </div>
-            </div>
-            <div class="loses-item">
-                <div class="loses-item-icon">
-                    <img src="https://russianwarship.rip/images/icons/icon-bbm.svg" alt="icon" class="loses-item-image" width="100" height="67">
-                </div>
-                <div class="loses-item-content">
-                    <div class="loses-item-title">
-                        <span id="armoured_fighting_vehicles" class="loses-item-value"></span>
-                        <span id="armoured_fighting_vehicles_per_day" class="loses-item-change">
-                        </span>
-                    </div>
-                    <div class="loses-item-text">
-                        ББМ
-                    </div>
-                </div>
-            </div>
-            <div class="loses-item">
-                <div class="loses-item-icon">
-                    <img src="https://russianwarship.rip/images/icons/icon-art.svg" alt="icon" class="loses-item-image" width="135" height="55">
-                </div>
-                <div class="loses-item-content">
-                    <div class="loses-item-title">
-                        <span id="artillery_systems" class="loses-item-value"></span>
-                        <span id="artillery_systems_per_day" class="loses-item-change">
-                        </span>
-                    </div>
-                    <div class="loses-item-text">
-                        арт. систем
-                    </div>
-                </div>
-            </div>
-            <div class="loses-item">
-                <div class="loses-item-icon">
-                    <img src="https://russianwarship.rip/images/icons/icon-rszv.svg" alt="icon" class="loses-item-image" width="117" height="75">
-                </div>
-                <div class="loses-item-content">
-                    <div class="loses-item-title">
-                        <span id="mlrs" class="loses-item-value"></span>
-                        <span id="mlrs_per_day" class="loses-item-change">
-                        </span>
-                    </div>
-                    <div class="loses-item-text">
-                        РСЗВ
-                    </div>
-                </div>
-            </div>
-            <div class="loses-item">
-                <div class="loses-item-icon">
-                    <img src="https://russianwarship.rip/images/icons/icon-ppo.svg" alt="icon" class="loses-item-image" width="114" height="76">
-                </div>
-                <div class="loses-item-content">
-                    <div class="loses-item-title">
-                        <span id="aa_warfare_systems" class="loses-item-value"></span>
-                        <span id="aa_warfare_systems_per_day" class="loses-item-change">
-                        </span>
-                    </div>
-                    <div class="loses-item-text">
-                        засобів ППО
-                    </div>
-                </div>
-            </div>
-            <div class="loses-item">
-                <div class="loses-item-icon">
-                    <img src="https://russianwarship.rip/images/icons/icon-plane.svg" alt="icon" class="loses-item-image" width="110" height="59">
-                </div>
-                <div class="loses-item-content">
-                    <div class="loses-item-title">
-                        <span id="planes" class="loses-item-value"></span>
-                        <span id="planes_per_day" class="loses-item-change">
-                        </span>
-                    </div>
-                    <div class="loses-item-text">
-                        літаків
-                    </div>
-                </div>
-            </div>
-            <div class="loses-item">
-                <div class="loses-item-icon">
-                    <img src="https://russianwarship.rip/images/icons/icon-helicopter.svg" alt="icon" class="loses-item-image" width="132" height="57">
-                </div>
-                <div class="loses-item-content">
-                    <div class="loses-item-title">
-                        <span id="helicopters" class="loses-item-value"></span>
-                        <span id="helicopters_per_day" class="loses-item-change">
-                        </span>
-                    </div>
-                    <div class="loses-item-text">
-                        гелікоптерів
-                    </div>
-                </div>
-            </div>
-            <div class="loses-item">
-                <div class="loses-item-icon">
-                    <img src="https://russianwarship.rip/images/icons/icon-auto.svg" alt="icon" class="loses-item-image" width="113" height="47">
-                </div>
-                <div class="loses-item-content">
-                    <div class="loses-item-title">
-                        <span id="vehicles_fuel_tanks" class="loses-item-value"></span>
-                        <span id="vehicles_fuel_tanks_per_day" class="loses-item-change">
-                        </span>
-                    </div>
-                    <div class="loses-item-text">
-                        автотехніки та автоцистерн
-                    </div>
-                </div>
-            </div>
-            <div class="loses-item">
-                <div class="loses-item-icon">
-                    <img src="https://russianwarship.rip/images/icons/icon-ship.svg" alt="icon" class="loses-item-image" width="135" height="41">
-                </div>
-                <div class="loses-item-content">
-                    <div class="loses-item-title">
-                        <span id="warships_cutters" class="loses-item-value"></span>
-                        <span id="warships_cutters_per_day" class="loses-item-change">
-                        </span>
-                    </div>
-                    <div class="loses-item-text">
-                        кораблів/катерів
-                    </div>
-                </div>
-            </div>
-            <div class="loses-item">
-                <div class="loses-item-icon">
-                    <img src="https://russianwarship.rip/images/icons/icon-bpla.svg" alt="icon" class="loses-item-image" width="115" height="64">
-                </div>
-                <div class="loses-item-content">
-                    <div class="loses-item-title">
-                        <span id="uav_systems" class="loses-item-value"></span>
-                        <span id="uav_systems_per_day" class="loses-item-change">
-                        </span>
-                    </div>
-                    <div class="loses-item-text">
-                        БПЛА
-                    </div>
-                </div>
-            </div>
-            <div class="loses-item">
-                <div class="loses-item-icon">
-                    <img src="https://russianwarship.rip/images/icons/icon-special.svg" alt="icon" class="loses-item-image" width="106" height="56">
-                </div>
-                <div class="loses-item-content">
-                    <div class="loses-item-title">
-                        <span id="special_military_equip" class="loses-item-value"></span>
-                        <span id="special_military_equip_per_day" class="loses-item-change">
-                        </span>
-                    </div>
-                    <div class="loses-item-text">
-                        спец. техніки
-                    </div>
-                </div>
-            </div>
-            <div class="loses-item">
-                <div class="loses-item-icon">
-                    <img src="https://russianwarship.rip/images/icons/icon-trk.svg" alt="icon" class="loses-item-image" width="127" height="93">
-                </div>
-                <div class="loses-item-content">
-                    <div class="loses-item-title">
-                        <span id="atgm_srbm_systems" class="loses-item-value"></span>
-                        <span id="atgm_srbm_systems_per_day" class="loses-item-change">
-                        </span>
-                    </div>
-                    <div class="loses-item-text">
-                        установок ОТРК/ТРК
-                    </div>
-                </div>
-            </div>
-            <div class="loses-item">
-                <div class="loses-item-icon">
-                    <img src="https://russianwarship.rip/images/icons/icon-rocket.svg" alt="icon" class="loses-item-image" width="99" height="99">
-                </div>
-                <div class="loses-item-content">
-                    <div class="loses-item-title">
-                        <span id="cruise_missiles" class="loses-item-value"></span>
-                        <span id="cruise_missiles_per_day" class="loses-item-change">
-                        </span>
-                    </div>
-                    <div class="loses-item-text">
-                        крилатих ракет
-                    </div>
-                </div>
-            </div>
-        </div>
+<div class="container">
+  <div class="page-header-title">
+    <h1 class="h1">Дохлі орки</h1>
+    <p>Станом на <strong id="date"></strong>
+      <strong id="day"></strong>
+    </p>
+  </div>
+  <div id="error" class="error"></div>
+  <div class="select">
+    <div class="date-select">
+      <label for="dateid">Оберіть дату</label>
+      <input type="date" name="dateid" id="dateid">
     </div>
+    <div class="entity-select">
+      <label for="entity-select">Оберіть тип</label>
+      <select id="entity-select">
+        <option value="all">Усі</option>
+        <option value="personnel_units">Особовий склад</option>
+        <option value="tanks">Танки</option>
+        <option value="armoured_fighting_vehicles">ББМ</option>
+        <option value="artillery_systems">Арт. системи</option>
+        <option value="mlrs">РСЗВ</option>
+        <option value="aa_warfare_systems">Засоби ППО</option>
+        <option value="planes">Літаки</option>
+        <option value="helicopters">Гелікоптери</option>
+        <option value="vehicles_fuel_tanks">Автотехніка та автоцистерни</option>
+        <option value="warships_cutters">Кораблів/катерів</option>
+        <option value="uav_systems">БПЛА</option>
+        <option value="special_military_equip">Спец. техніка</option>
+        <option value="atgm_srbm_systems">Установок ОТРК/ТРК</option>
+        <option value="cruise_missiles">Крилаті ракети</option>
+      </select>
+    </div>
+    <button id="submit">Обрати</button>
+  </div>
+  <div class="loses-content">
+  </div>
+  <script type="text/javascript" src="main.js"></script>
+</div>
 </body>
 
 </html>
