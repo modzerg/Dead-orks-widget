@@ -104,11 +104,12 @@ getLatestStat();
             })
             .then((data) => {
                 if (data.message === 'The given data was invalid.') {
-                    $('#error').html('Вкажіть правильну дату (від 24.02.2022 до сьогодні)').addClass('visible')
+                    $('#error').html('Вкажіть правильну дату (від 24.02.2022 до сьогодні)').addClass('visible');
+                } else if (data.message === 'Statistic record not found.') {
+                    $('#error').html('Записів за цей цень не знайдено, виберіть іншу дату.').addClass('visible');
                 } else {
-                    $('#error').html('').removeClass('visible')
+                    $('#error').html('').removeClass('visible');
                 }
-
                 $('#date').html(data.data.date);
                 $('#day').html('(' + data.data.day + '-й день війни)');
 
